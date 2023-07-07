@@ -1,4 +1,6 @@
-# uassyapri
+# uas lab pbk
+Nama : M Syafri Abdillah
+Npm : 213510331
 
 ## Project setup
 ```
