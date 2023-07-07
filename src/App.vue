@@ -1,26 +1,61 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <header>
+      <nav>
+        <ul>
+          <li><router-link to="/">Cuaca Negara Terkini</router-link></li>
+          <li><router-link to="/daftarnamapresiden">Nama Presiden Negara</router-link></li>
+          <li><router-link to="/todolist">Daftar Kegiatan Negara</router-link></li>
+          <li><router-link to="/penduduknegara">Jumlah Penduduk Negara</router-link></li>
+          <li><router-link to="/lambangnegara">Lambang Negara</router-link></li>
+        </ul>
+      </nav>
+    </header>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+};
 </script>
-
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+header {
+  background: darkolivegreen;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: olive;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: darkolivegreen;
+}
+
+.router-link-active a {
+  background-color: darkolivegreen;
 }
 </style>
